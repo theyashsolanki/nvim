@@ -16,5 +16,16 @@ vim.keymap.set("n", "n", "")
 
 vim.keymap.set("n", "<ESC>", ":nohl<CR>")
 
+vim.keymap.set("n", "<leader>c+", function()
+	local current_file = tostring(vim.fn.expand("%"))
+	if string.match(current_file, "%.cpp$") or string.match(current_file, "%.cxx$") then
+		vim.cmd("!g++ --debug %")
+	end
+end)
+
 -- nvim tree
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
+
+-- dap
+vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>")
+vim.keymap.set("n", "<leader>dr", ":DapContinue<CR>")

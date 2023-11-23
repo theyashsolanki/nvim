@@ -25,4 +25,8 @@ require("lazy").setup({
 		end,
 	},
 	{ import = "zeno.plugins" },
+}, {
+	install = {
+		colorscheme = { "solarized-osaka" },
+	},
 })

@@ -2,7 +2,7 @@
 vim.cmd([[
   augroup YankHighlight
   autocmd!
-  autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup='Visual', timeout=200}
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup='IncSearch', timeout=200}
   augroup END
 ]])
 vim.cmd([[
@@ -19,7 +19,6 @@ vim.cmd([[
   hi Visual gui=NONE guibg=#454545
   hi IncSearch guibg=#ff0000 guifg=#000000
   hi Search guibg=#ff0000 guifg=#FFA500
-  
 ]])
 
 vim.cmd([[highlight IndentBlanklineContextChar guifg=#9D7CD8 gui=nocombine]])
@@ -28,6 +27,16 @@ vim.opt.fillchars = { eob = " " }
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "#007ACC" })
+-- vim.api.nvim_set_hl(0, "FloatNormal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopeNormalFloat", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none", fg = "#007ACC" })
+-- vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NvimTreeNormalFl", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NvimTreeNormalWinSeparator", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "CmpSelection", { bg = "#005D8E", fg = "none" })
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "CmpNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "CmpBorder", { bg = "none", fg = "#29a298" })
+-- vim.api.nvim_set_hl(0, "DapUIBreakpointsCurrentLine", { bg = "#2c3539", fg = "#29a298" })
