@@ -37,10 +37,10 @@ return {
 				completion = {
 					border = "rounded",
 					scrollbar = false,
-					winhighlight = "Normal:CmpNormal,CursorLine:Visual,FloatBorder:CmpBorder,Search:None",
+					winhighlight = "Normal:Normal,CursorLine:Visual,FloatBorder:CmpBorder,Search:None",
 				},
 				documentation = cmp.config.window.bordered({
-					winhighlight = "FloatBorder:FloatBorder",
+					winhighlight = "Normal:Normal,FloatBorder:CmpDocumentationBorder",
 				}),
 			},
 

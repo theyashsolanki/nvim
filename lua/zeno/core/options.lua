@@ -1,8 +1,16 @@
 local opt = vim.opt
 
+-- disbale netrw intro
 opt.shortmess:append("sI")
+
+-- remove ~
+vim.opt.fillchars = { eob = " " }
+
+-- set leader key
 vim.g.mapleader = " "
+
 -- vim.g.transparency = 0.5
+vim.opt.laststatus = 3
 
 opt.showmode = false
 opt.ruler = false
@@ -51,3 +59,11 @@ opt.iskeyword:append("-")
 vim.opt.termguicolors = true
 
 vim.opt.undofile = true
+
+-- highlight yanked text
+vim.cmd([[
+  augroup YankHighlight
+  autocmd!
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup='IncSearch', timeout=200}
+  augroup END
+]])

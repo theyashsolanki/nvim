@@ -29,3 +29,5 @@ vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 -- dap
 vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>")
 vim.keymap.set("n", "<leader>dr", ":DapContinue<CR>")
+
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
