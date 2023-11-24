@@ -72,7 +72,4 @@ return {
 			require("colorizer").setup()
 		end,
 	},
-	{
-		"tpope/vim-fugitive",
-	},
 }

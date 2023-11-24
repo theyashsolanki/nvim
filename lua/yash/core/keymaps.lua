@@ -46,3 +46,43 @@ vim.keymap.set("n", "<leader>]d", ":Lspsaga diagnostic_jump_next<CR>")
 vim.keymap.set("n", "<leader>pr", ":Lspsaga rename ++project<CR>")
 vim.keymap.set("n", "<leader>ic", ":Telescope lsp_incoming_calls<CR>")
 vim.keymap.set("n", "<leader>oc", ":Telescope lsp_outgoing_calls<CR>")
+
+-- git signs
+local gs = package.loaded.gitsigns
+vim.keymap.set("n", "]c", function()
+	if vim.wo.diff then
+		return "]c"
+	end
+	vim.schedule(function()
+		gs.next_hunk()
+	end)
+	return "<Ignore>"
+end, { expr = true })
+
+vim.keymap.set("n", "[c", function()
+	if vim.wo.diff then
+		return "[c"
+	end
+	vim.schedule(function()
+		gs.prev_hunk()
+	end)
+	return "<Ignore>"
+end, { expr = true })
+
+-- Actions
+vim.keymap.set("n", "<leader>sh", gs.stage_hunk)
+vim.keymap.set("n", "<leader>rh", gs.reset_hunk)
+vim.keymap.set("v", "<leader>sh", function()
+	gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+end)
+vim.keymap.set("v", "<leader>rh", function()
+	gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+end)
+vim.keymap.set("n", "<leader>hu", gs.undo_stage_hunk)
+vim.keymap.set("n", "<leader>grb", gs.reset_buffer)
+vim.keymap.set("n", "<leader>hp", gs.preview_hunk)
+vim.keymap.set("n", "<leader>gb", ":Gitsigns blame_line<CR>")
+vim.keymap.set("n", "<leader>hd", gs.diffthis)
+vim.keymap.set("n", "<leader>td", gs.toggle_deleted)
+-- Text object
+vim.keymap.set("n", "vah", ":<C-U>Gitsigns select_hunk<CR>")
