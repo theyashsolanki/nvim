@@ -1,5 +1,19 @@
 return {
 	{
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup({})
+		end,
+	},
+	{ "folke/neoconf.nvim", cmd = "Neoconf" },
+	{
+		"folke/neodev.nvim",
+		config = function()
+			require("neodev").setup()
+		end,
+	},
+
+	{
 		"christoomey/vim-tmux-navigator",
 		config = function()
 			vim.g.tmux_navigator_no_mappings = 1
@@ -57,5 +71,8 @@ return {
 		config = function()
 			require("colorizer").setup()
 		end,
+	},
+	{
+		"tpope/vim-fugitive",
 	},
 }

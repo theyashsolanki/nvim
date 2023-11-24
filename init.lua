@@ -1,3 +1,3 @@
-require("zeno.core.options")
-require("zeno.lazy")
-require("zeno.core.keymaps")
+require("yash.core.options")
+require("yash.lazy")
+require("yash.core.keymaps")

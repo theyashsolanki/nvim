@@ -1,4 +1,4 @@
-local c = require("zeno.theme.solarized-palette")
+local c = require("yash.theme.solarized-palette")
 
 local hl = vim.api.nvim_set_hl
 

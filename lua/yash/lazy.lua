@@ -11,22 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-	{
-		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup({})
-		end,
-	},
-	{ "folke/neoconf.nvim", cmd = "Neoconf" },
-	{
-		"folke/neodev.nvim",
-		config = function()
-			require("neodev").setup()
-		end,
-	},
-	{ import = "zeno.plugins" },
-}, {
-	install = {
-		colorscheme = { "solarized-osaka" },
-	},
-})
+	{ import = "yash.plugins.lsp" },
+	{ import = "yash.plugins.dap" },
+	{ import = "yash.plugins.treesitter" },
+	{ import = "yash.plugins.cmp" },
+	{ import = "yash.plugins" },
+}, { install = { colorscheme = { "solarized-osaka" } } })

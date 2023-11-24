@@ -4,6 +4,6 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		require("zeno.theme.lualine-evil")
+		require("yash.theme.lualine-evil")
 	end,
 }

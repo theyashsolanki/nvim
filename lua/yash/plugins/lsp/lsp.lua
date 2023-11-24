@@ -6,7 +6,7 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		require("zeno.plugins.lsp.setup")
+		require("yash.plugins.lsp.config.setup")
 		-- Use LspAttach autocommand to only map the following keys
 		-- after the language server attaches to the current buffer
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -18,7 +18,6 @@ return {
 				-- Buffer local mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
 				local opts = { buffer = ev.buf }
-				vim.keymap.set("n", "gD", " <cmd>Lspsaga peek_definition<CR>", opts)
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 				-- local success, _ = pcall(function()
 				-- 	vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
@@ -33,8 +32,6 @@ return {
 				vim.keymap.set("n", "<space>wl", function()
 					print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 				end, opts)
-				vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
-				vim.keymap.set("n", "<space>ra", "<cmd>Lspsaga rename<CR>", opts)
 				vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 				-- vim.keymap.set("n", "<space>f", function()

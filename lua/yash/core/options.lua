@@ -67,3 +67,17 @@ vim.cmd([[
   autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup='IncSearch', timeout=200}
   augroup END
 ]])
+
+vim.cmd([[
+set nocompatible
+filetype plugin on
+syntax on
+]])
+
+vim.cmd([[
+
+let g:vimwiki_list = [{'path': '~/personal/vimwiki/',
+                      \ }]
+]])
+
+vim.g.skip_ts_context_commentstring_module = true
