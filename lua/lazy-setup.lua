@@ -11,6 +11,23 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+	{
+		"folke/neodev.nvim",
+		config = function()
+			require("neodev").setup({
+				library = {
+					enabled = true,
+					runtime = true,
+					types = true,
+					plugins = true,
+				},
+				setup_jsonls = true,
+				lspconfig = true,
+				pathStrict = true,
+			})
+		end,
+	},
+
 	{ import = "plugins.lsp" },
 	{ import = "plugins.dap" },
 	{ import = "plugins.treesitter" },

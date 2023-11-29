@@ -5,13 +5,6 @@ return {
 			require("which-key").setup({})
 		end,
 	},
-	{ "folke/neoconf.nvim", cmd = "Neoconf" },
-	{
-		"folke/neodev.nvim",
-		config = function()
-			require("neodev").setup()
-		end,
-	},
 
 	{
 		"christoomey/vim-tmux-navigator",

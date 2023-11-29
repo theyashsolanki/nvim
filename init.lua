@@ -1,3 +1,3 @@
 require("core.options")
-require("lua.lazy")
+require("lazy-setup")
 require("core.keymaps")

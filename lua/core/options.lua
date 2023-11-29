@@ -1,6 +1,6 @@
 local opt = vim.opt
 
--- disbale netrw intro
+-- disable intro
 opt.shortmess:append("sI")
 
 -- remove ~
@@ -26,7 +26,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- Line Wrapping
-opt.wrap = false
+opt.wrap = true
 
 -- Search
 opt.ignorecase = true
