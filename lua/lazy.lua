@@ -11,9 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-	{ import = "yash.plugins.lsp" },
-	{ import = "yash.plugins.dap" },
-	{ import = "yash.plugins.treesitter" },
-	{ import = "yash.plugins.cmp" },
-	{ import = "yash.plugins" },
+	{ import = "plugins.lsp" },
+	{ import = "plugins.dap" },
+	{ import = "plugins.treesitter" },
+	{ import = "plugins.cmp" },
+	{ import = "plugins.lualine" },
+	{ import = "plugins" },
 }, { install = { colorscheme = { "solarized-osaka" } } })

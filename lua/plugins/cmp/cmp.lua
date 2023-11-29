@@ -25,6 +25,6 @@ return {
 	},
 
 	config = function()
-		require("yash.plugins.cmp.config.setup")
+		require("plugins.cmp.config.setup")
 	end,
 }

@@ -6,9 +6,9 @@ return {
 			"mfussenegger/nvim-dap",
 			config = function()
 				local dap = require("dap")
-				local debugpy = require("yash.plugins.dap.config.python")
-				local node = require("yash.plugins.dap.config.typescript")
-				local lldb = require("yash.plugins.dap.config.cpp")
+				local debugpy = require("plugins.dap.config.python")
+				local node = require("plugins.dap.config.typescript")
+				local lldb = require("plugins.dap.config.cpp")
 
 				-- c / c++
 				dap.configurations.cpp = lldb

@@ -1,3 +1,3 @@
-require("yash.core.options")
-require("yash.lazy")
-require("yash.core.keymaps")
+require("core.options")
+require("lua.lazy")
+require("core.keymaps")
