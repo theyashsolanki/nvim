@@ -1,3 +1,3 @@
 require("core.options")
-require("lazy-setup")
+require("plugins.lazy.setup")
 require("core.keymaps")

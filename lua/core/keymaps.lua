@@ -11,6 +11,7 @@ vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")
 vim.keymap.set("n", "n", "")
 vim.keymap.set("n", "<ESC>", ":nohl<CR>")
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- compile c/c++
 vim.keymap.set("n", "<leader>c+", function()
@@ -28,7 +29,7 @@ vim.keymap.set({ "n", "v" }, "<leader>fm", function()
 	require("conform").format()
 end)
 
--- nvim tree
+-- file explorer
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 
 -- dap

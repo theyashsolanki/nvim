@@ -81,3 +81,8 @@ let g:vimwiki_list = [{'path': '~/personal/vimwiki/',
 ]])
 
 vim.g.skip_ts_context_commentstring_module = true
+vim.g.startify_disable_at_cursor = 1
+vim.cmd([[
+        autocmd FileType startify setlocal nocursorline
+        autocmd FileType startify setlocal nocursorcolumn
+        ]])

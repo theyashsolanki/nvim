@@ -23,9 +23,8 @@ return {
 	},
 	{
 		"mbbill/undotree",
-		config = function()
-			vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-		end,
+		event = { "BufReadPre" },
+		config = function() end,
 	},
 	{
 		"kylechui/nvim-surround",
@@ -47,12 +46,13 @@ return {
 
 	{
 		"numToStr/Comment.nvim",
-		event = { "BufReadPre", "BufNewFile" },
+		-- event = { "BufReadPre", "BufNewFile" },
 		config = true, -- runs require('Comment').setup()
 	},
 
 	{
 		"vimwiki/vimwiki",
+		lazy = true,
 		config = function() end,
 	},
 	{
@@ -61,6 +61,7 @@ return {
 	},
 	{
 		"norcalli/nvim-colorizer.lua",
+		lazy = true,
 		config = function()
 			require("colorizer").setup()
 		end,
