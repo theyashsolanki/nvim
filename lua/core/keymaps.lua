@@ -12,6 +12,18 @@ vim.keymap.set("i", "<C-k>", "<Up>")
 vim.keymap.set("n", "n", "")
 vim.keymap.set("n", "<ESC>", ":nohl<CR>")
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.api.nvim_set_keymap("n", "<leader>vm", [[:lua OpenImageWithFeh()<CR>]], { noremap = true, silent = true })
+
+function OpenImageWithFeh()
+	local image_path = vim.fn.expand("<cfile>")
+	if vim.fn.filereadable(image_path) == 1 then
+		vim.fn.system("feh " .. vim.fn.shellescape(image_path))
+	else
+		print("Not a valid image path: " .. image_path)
+	end
+end
+
+vim.keymap.set("n", "<leader>tt", require("plugins.theme.toggle_transparency").toggle_transparency)
 
 -- compile c/c++
 vim.keymap.set("n", "<leader>c+", function()

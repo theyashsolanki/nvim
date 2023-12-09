@@ -77,5 +77,6 @@ return {
 		vim.keymap.set("n", "<leader>fz", builtin.current_buffer_fuzzy_find, {})
 		vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
 		vim.keymap.set("n", "<leader>th", builtin.colorscheme, {})
+		vim.keymap.set("n", "<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>")
 	end,
 }
