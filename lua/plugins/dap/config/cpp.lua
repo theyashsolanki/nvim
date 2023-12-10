@@ -16,6 +16,5 @@ local config = {
 		args = {},
 	},
 }
-dap.configurations.cpp = config
 
 return config

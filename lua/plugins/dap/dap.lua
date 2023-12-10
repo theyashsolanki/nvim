@@ -9,6 +9,7 @@ return {
 				local debugpy = require("plugins.dap.config.python")
 				local node = require("plugins.dap.config.typescript")
 				local lldb = require("plugins.dap.config.cpp")
+				local bashdb = require("plugins.dap.config.bash")
 
 				-- c / c++
 				dap.configurations.cpp = lldb
@@ -21,6 +22,9 @@ return {
 				-- typescript / javascript
 				dap.configurations.typescript = node
 				dap.configurations.javascript = node
+
+				-- bash
+				dap.configurations.sh = bashdb
 			end,
 		},
 	},
