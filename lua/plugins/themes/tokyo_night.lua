@@ -1,12 +1,13 @@
 return {
 	"folke/tokyonight.nvim",
 	config = function()
+		local colorscheme = require("core.colorscheme")
 		require("tokyonight").setup({
-			transparent = true,
-			style = "dragon",
+			transparent = colorscheme.transparent,
+			style = "moon",
 			styles = {
-				sidebars = "transparent",
-				floats = "transparent",
+				sidebars = colorscheme.style,
+				floats = colorscheme.style,
 			},
 			on_highlights = function(hl, c)
 				local prompt = "#2d3149"
@@ -24,6 +25,6 @@ return {
 				}
 			end,
 		})
-		vim.cmd("colorscheme tokyonight")
+		vim.cmd("colorscheme " .. colorscheme.theme)
 	end,
 }

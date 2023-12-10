@@ -23,7 +23,7 @@ function OpenImageWithFeh()
 	end
 end
 
-vim.keymap.set("n", "<leader>tt", require("plugins.theme.toggle_transparency").toggle_transparency)
+vim.keymap.set("n", "<leader>tt", require("core.colorscheme").toggle_transparency)
 
 -- compile c/c++
 vim.keymap.set("n", "<leader>c+", function()

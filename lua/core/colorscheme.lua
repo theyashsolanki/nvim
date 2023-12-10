@@ -1,5 +1,6 @@
 local M = {}
 
+M.theme = "tokyonight"
 M.transparent = true
 
 function M.toggle_transparency()
@@ -8,7 +9,7 @@ function M.toggle_transparency()
 
 	-- Reload the module "solarized-osaka.nvim" if necessary
 	local success, error_message = pcall(function()
-		require("lazy.core.loader").reload("solarized-osaka.nvim")
+		require("lazy.core.loader").reload(M.theme .. ".nvim")
 	end)
 
 	if not success then

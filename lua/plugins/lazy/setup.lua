@@ -22,5 +22,5 @@ require("lazy").setup({
 	{ import = "plugins.cmp" },
 	{ import = "plugins.lualine" },
 	{ import = "plugins" },
-	{ import = "plugins.theme.solarized_osaka" },
+	{ import = "plugins.themes" },
 }, { install = { colorscheme = { "solarized-osaka" } } })
