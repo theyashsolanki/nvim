@@ -36,7 +36,7 @@ end)
 
 -- auto format
 vim.keymap.set({ "n", "v" }, "<leader>fm", function()
-	require("conform").format()
+	require("conform").format({ async = true, lsp_fallback = true })
 end)
 
 -- file explorer

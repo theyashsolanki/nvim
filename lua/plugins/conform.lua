@@ -13,11 +13,12 @@ return {
 				javascriptreact = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
-				html = { "htmlbeautifier", "rustywind" },
+				-- html = { "htmlbeautifier", "rustywind" },
 				css = { "prettier" },
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				cpp = { "clang-format" },
+				c = { "clang-format" },
 				go = { "goimports-reviser", "gofumpt" },
 			},
 			format_on_save = {
