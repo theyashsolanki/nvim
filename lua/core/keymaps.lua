@@ -23,8 +23,6 @@ function OpenImageWithFeh()
 	end
 end
 
-vim.keymap.set("n", "<leader>tt", require("core.colorscheme").toggle_transparency)
-
 -- compile c/c++
 vim.keymap.set("n", "<leader>c+", function()
 	local current_file = tostring(vim.fn.expand("%"))

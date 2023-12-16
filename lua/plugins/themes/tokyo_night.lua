@@ -1,13 +1,14 @@
 return {
 	"folke/tokyonight.nvim",
 	config = function()
-		local colorscheme = require("core.colorscheme")
 		require("tokyonight").setup({
-			transparent = colorscheme.transparent,
-			style = "moon",
+			transparent = true,
+			style = "storm",
 			styles = {
-				sidebars = colorscheme.style,
-				floats = colorscheme.style,
+				comments = { italic = true },
+				keywords = { italic = true },
+				sidebars = "transparent",
+				floats = "transparent",
 			},
 			on_highlights = function(hl, c)
 				local prompt = "#2d3149"
@@ -23,8 +24,10 @@ return {
 				hl.TelescopePreviewTitle = {
 					fg = "#808080",
 				}
+				-- hl.Exception = {
+				-- 	fg = c.red,
+				-- }
 			end,
 		})
-		vim.cmd("colorscheme " .. colorscheme.theme)
 	end,
 }
