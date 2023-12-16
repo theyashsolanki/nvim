@@ -12,8 +12,8 @@ return {
 					-- web dev stuff
 					"css-lsp",
 					"html-lsp",
-					"rustywind",
-					"htmlbeautifier",
+					-- "rustywind",
+					-- "htmlbeautifier",
 					"typescript-language-server",
 					"deno",
 					"prettier",
