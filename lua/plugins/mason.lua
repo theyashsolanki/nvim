@@ -18,7 +18,7 @@ return {
 					"deno",
 					"prettier",
 					"tailwindcss-language-server",
-					"emmet-ls",
+					"emmet-language-server",
 					-- "eslint-lsp",
 					"json-lsp",
 
