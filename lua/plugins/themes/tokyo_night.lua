@@ -10,7 +10,7 @@ return {
 				sidebars = "transparent",
 				floats = "transparent",
 			},
-			on_highlights = function(hl, c)
+			on_highlights = function(hl, c) -- c
 				local prompt = "#2d3149"
 				hl.TelescopeBorder = {
 					fg = "#2d3149",
@@ -23,6 +23,12 @@ return {
 				}
 				hl.TelescopePreviewTitle = {
 					fg = "#808080",
+				}
+				hl.LineNr = {
+					fg = hl.CursorLineNr.fg,
+				}
+				hl.DiagnosticUnnecessary = {
+					fg = hl.CursorLineNr.fg,
 				}
 				-- hl.Exception = {
 				-- 	fg = c.red,
