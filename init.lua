@@ -1,4 +1,6 @@
 require("core.options")
+local colorscheme = require("core.colorscheme")
 require("plugins.lazy.setup")
 require("core.keymaps")
-require("core.colorscheme")
+
+vim.cmd("colorscheme " .. colorscheme.theme)

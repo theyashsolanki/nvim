@@ -1,12 +1,13 @@
 return {
 	"craftzdog/solarized-osaka.nvim",
 	config = function()
+		local colorscheme = require("core.colorscheme")
 		require("solarized-osaka").setup({
-			transparent = true,
+			transparent = colorscheme.transparent,
 			dim_inactive = false,
 			styles = {
-				floats = "transparent",
-				sidebars = "transparent",
+				floats = colorscheme.floats,
+				sidebars = colorscheme.sidebars,
 			},
 			--- You can override specific color groups to use other groups or a hex color
 			--- function will be called with a ColorScheme table

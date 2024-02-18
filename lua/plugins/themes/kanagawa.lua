@@ -1,6 +1,7 @@
 return {
 	"rebelot/kanagawa.nvim",
 	config = function()
+		local colorscheme = require("core.colorscheme")
 		-- Default options:
 		require("kanagawa").setup({
 			compile = false, -- enable compiling the colorscheme
@@ -10,7 +11,7 @@ return {
 			keywordStyle = { italic = true },
 			statementStyle = { bold = false },
 			typeStyle = {},
-			transparent = false, -- do not set background color
+			transparent = colorscheme.transparent, -- do not set background color
 			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
 			terminalColors = true, -- define vim.g.terminal_color_{0,17}
 			colors = { -- add/modify theme and palette colors
@@ -31,7 +32,7 @@ return {
 			end,
 			theme = "wave", -- Load "wave" theme when 'background' option is not set
 			background = { -- map the value of 'background' option to a theme
-				dark = "dragon", -- try "dragon" !
+				dark = colorscheme.style, -- try "dragon" !
 				light = "lotus",
 			},
 		})

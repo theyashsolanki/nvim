@@ -1,6 +1,7 @@
 return {
 	"ellisonleao/gruvbox.nvim",
 	config = function()
+		local colorscheme = require("core.colorscheme")
 		-- Default options:
 		require("gruvbox").setup({
 			terminal_colors = true, -- add neovim terminal colors
@@ -24,7 +25,7 @@ return {
 			palette_overrides = {},
 			overrides = {},
 			dim_inactive = false,
-			transparent_mode = false,
+			transparent_mode = colorscheme.transparent,
 		})
 	end,
 }
