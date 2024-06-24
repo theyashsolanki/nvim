@@ -51,10 +51,6 @@ return {
 	},
 
 	{
-		"vimwiki/vimwiki",
-		config = function() end,
-	},
-	{
 		"stevearc/dressing.nvim",
 		opts = {},
 	},

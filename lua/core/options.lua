@@ -74,10 +74,4 @@ filetype plugin on
 syntax on
 ]])
 
-vim.cmd([[
-
-let g:vimwiki_list = [{'path': '~/personal/vimwiki/',
-                      \ }]
-]])
-
 vim.g.skip_ts_context_commentstring_module = true

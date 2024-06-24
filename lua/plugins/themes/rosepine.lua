@@ -5,9 +5,9 @@ return {
 		local colorscheme = require("core.colorscheme")
 		require("rose-pine").setup({
 			--- @usage 'auto'|'main'|'moon'|'dawn'
-			variant = colorscheme.style,
+			variant = "main",
 			--- @usage 'main'|'moon'|'dawn'
-			dark_variant = colorscheme.style,
+			dark_variant = "main",
 			bold_vert_split = false,
 			dim_nc_background = false,
 			disable_background = colorscheme.transparent,

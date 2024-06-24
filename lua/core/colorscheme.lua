@@ -1,9 +1,14 @@
 local M = {}
 
-M.theme = "solarized-osaka"
+M.theme = "onedark"
 M.transparent = true
 M.style = ""
-M.floats = "transparent"
-M.sidebars = "transparent"
+if M.transparent then
+	M.floats = "transparent"
+	M.sidebars = "transparent"
+else
+	M.floats = ""
+	M.sidebars = ""
+end
 
 return M

@@ -9,8 +9,8 @@ return {
 				-- Use a sub-list to run only the first available formatter
 				javascript = { "deno_fmt" },
 				typescript = { "deno_fmt" },
-				typescriptreact = { "prettier" },
-				javascriptreact = { "prettier" },
+				typescriptreact = { "deno_fmt" },
+				javascriptreact = { "deno_fmt" },
 				json = { "prettier" },
 				yaml = { "prettier" },
 				-- html = { "htmlbeautifier", "rustywind" },

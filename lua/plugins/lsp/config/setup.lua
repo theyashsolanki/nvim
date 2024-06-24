@@ -14,11 +14,21 @@ local servers = {
 	"html",
 	"cssls",
 	"tailwindcss",
-	"emmet_language_server",
 	"jsonls",
 	"bashls",
 	"pyright",
+	"jdtls",
 }
+-- lspconfig["html"].setup({
+-- 	capabilities = capabilities,
+-- 	filetypes = { "html", "htmldjango", "javascript", "javascriptreact" },
+-- 	-- root_dir = util.root_pattern("package.json", "html"),
+-- })
+lspconfig["emmet_language_server"].setup({
+	capabilities = capabilities,
+	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescriptreact" },
+	-- root_dir = util.root_pattern("package.json", "html"),
+})
 lspconfig["tsserver"].setup({
 	capabilities = capabilities,
 	filetypes = {

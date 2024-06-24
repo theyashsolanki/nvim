@@ -31,6 +31,7 @@ return {
 				"typescript",
 				"tsx",
 				"c",
+				"cpp",
 				"markdown",
 				"markdown_inline",
 				"json",
